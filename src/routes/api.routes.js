@@ -20,7 +20,7 @@ router.post('/users', async (req, res) => {
         const { useNombre, useApellido, useDocumento, useDireccion, useCordinates} = req.body;
         const newUsuario = {useNombre, useApellido, useDocumento, useDireccion, useCordinates}
         const data = await DTO(newUsuario);
-        res.json(data);
+        res.json(200, [data, newUsuario]);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
