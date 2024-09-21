@@ -4,7 +4,6 @@ const pool = createPool({
     host: 'localhost',
     port: '3306',
     user: 'root',
-    password: 'S1234',
     database: 'apiMaps'
 });
 

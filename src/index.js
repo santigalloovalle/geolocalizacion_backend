@@ -2,8 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import apiRoutes from './routes/api.routes.js';
 import cors from'cors';
+import apiRoutes from './routes/api.routes.js';
 
 
 
@@ -12,7 +12,7 @@ const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Setting
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 3000);
 
 // Middlewares
 app.use(morgan('dev'));
