@@ -21,7 +21,7 @@ CREATE PROCEDURE buscarUsuarios(
 	IN coordY VARCHAR(255)
 )
 BEGIN
-SELECT users.useNombre, users.useDocumento, users.useDireccion, users.useCoordinates, ST_Distance_Sphere(useCoordinates, POINT(coordX,coordY)) AS distances 
+SELECT users.useNombre, users.useApellido, users.useDocumento, users.useDireccion, users.useCoordinates, ST_Distance_Sphere(useCoordinates, POINT(coordX,coordY)) AS distances 
 FROM users ORDER BY distances ASC;
 END//
 
